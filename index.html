@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Welcome to Secure </h2>
+    <h2>INDIAN BANK</h2>
+
+    <div id="mainMenu">
+      <button onclick="showLogin()">Login with PIN</button>
+      <button onclick="showForgotOptions()">Forgot PIN</button>
+    </div>
+
+    <div id="loginSection" class="section hidden">
+      <h3>Login</h3>
+      <input type="password" id="pinInput" placeholder="Enter 4-digit PIN" />
+      <button onclick="login()">Submit</button>
+      <p id="loginMessage"></p>
+      <button onclick="backToMain()">Back</button>
+    </div>
+
+    <div id="forgotOptions" class="section hidden">
+      <h3>Forgot PIN - Choose Option</h3>
+      <button onclick="showRetrievePIN()">Retrieve PIN</button>
+      <button onclick="showResetPIN()">Reset PIN</button>
+      <button onclick="backToMain()">Back</button>
+    </div>
+
+    <div id="retrievePINSection" class="section hidden">
+      <h3>Retrieve PIN</h3>
+      <input type="text" id="phoneInput" placeholder="Enter phone number" />
+      <input type="text" id="nicknameInput" placeholder="Enter your nickname" />
+      <button onclick="retrievePIN()">Retrieve PIN</button>
+      <p id="forgotMessage"></p>
+      <button onclick="showForgotOptions()">Back</button>
+    </div>
+
+    <div id="resetPINSection" class="section hidden">
+      <h3>Reset PIN</h3>
+      <input type="text" id="phoneInputReset" placeholder="Enter phone number" />
+      <button onclick="checkPhoneForReset()">Next</button>
+      <p id="resetMessage"></p>
+      <button onclick="showForgotOptions()">Back</button>
+    </div>
+
+    <div id="setNewPinSection" class="section hidden">
+      <h3>Set New PIN</h3>
+      <input type="password" id="newPinInput" placeholder="Enter new 4-digit PIN" />
+      <input type="password" id="confirmPinInput" placeholder="Confirm new 4-digit PIN" />
+      <button onclick="resetPIN()">Reset PIN</button>
+      <p id="setPinMessage"></p>
+      <button onclick="showResetPIN()">Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
